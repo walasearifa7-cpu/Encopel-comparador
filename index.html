@@ -4,17 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Encopel Comparador</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .imagem { margin-bottom: 20px; }
+    .resultado { margin-top: 20px; white-space: pre-wrap; background: #f0f0f0; padding: 10px; border-radius: 5px; }
+  </style>
 </head>
 <body>
-  <h1>Encopel Comparador de Pedidos</h1>
+  <h1>Encopel Comparador</h1>
 
-  <input type="file" id="file1" accept="image/*">
-  <input type="file" id="file2" accept="image/*">
-  <button onclick="compare()">Comparar</button>
+  <div class="imagem">
+    <label>Imagem 1:</label>
+    <input type="file" id="imagem1" accept="image/*" />
+  </div>
 
-  <div id="result"></div>
+  <div class="imagem">
+    <label>Imagem 2:</label>
+    <input type="file" id="imagem2" accept="image/*" />
+  </div>
 
+  <button onclick="compararImagens()">Comparar</button>
+
+  <div class="resultado" id="resultado"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
