@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encopel Comparador</title>
+  <script type="module" src="./analisador-ia/index.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 500px;
+      margin: auto;
+      padding: 1em;
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      margin: 1em auto;
+    }
+
+    #resultado {
+      white-space: pre-wrap;
+      margin-top: 1em;
+      text-align: left;
+      border: 1px solid #ccc;
+      padding: 1em;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Comparador de Pedidos</h1>
+
+  <p>Envie os dois prints (antes e depois)</p>
+
+  <input type="file" id="img1" accept="image/*" />
+  <input type="file" id="img2" accept="image/*" />
+
+  <button id="botaoComparar">Comparar</button>
+
+  <div id="resultado"></div>
+</body>
+</html>
